@@ -1,0 +1,93 @@
+/* Сайт игры «Горн: симулятор кузнеца» / Forgewright. Без внешних шрифтов, скриптов и счётчиков. */
+:root {
+  --bg: #1b1512;
+  --panel: #261d18;
+  --line: #45342a;
+  --text: #efe4d2;
+  --muted: #b9a892;
+  --ember: #f0a04b;
+  --ember-deep: #c8641e;
+  --paper: #ead9bb;
+  --ink: #2b2019;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 Georgia, "Times New Roman", "PT Serif", serif;
+}
+
+a { color: var(--ember); }
+a:hover, a:focus { color: #ffc27a; }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+/* шапка */
+.top { border-bottom: 1px solid var(--line); background: #15100d; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; }
+.brand { color: var(--text); text-decoration: none; font-weight: bold; letter-spacing: .02em; }
+.lang { font: 14px/1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; white-space: nowrap; }
+.lang a, .lang span { display: inline-block; padding: 9px 12px; border-radius: 6px; text-decoration: none; }
+.lang span { background: var(--ember-deep); color: #fff; }
+
+/* первый экран */
+.hero {
+  padding: 44px 0 36px;
+  background:
+    radial-gradient(120% 90% at 50% 115%, rgba(240, 160, 75, .30), rgba(200, 100, 30, .10) 45%, transparent 70%),
+    var(--bg);
+  text-align: center;
+}
+.hero h1 { margin: 0 0 6px; font-size: clamp(30px, 8vw, 50px); line-height: 1.15; color: #ffe9c9; text-wrap: balance; }
+.hero .sub { margin: 0 0 18px; color: var(--ember); font-size: clamp(17px, 4.6vw, 22px); }
+.hero .lead { max-width: 620px; margin: 0 auto 22px; font-size: 18px; }
+.badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0; padding: 0; list-style: none;
+  font: 14px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.badges li { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--muted); }
+
+/* разделы */
+section { padding: 34px 0; border-top: 1px solid var(--line); }
+h2 { margin: 0 0 16px; font-size: 25px; color: #ffe9c9; }
+h3 { margin: 26px 0 8px; font-size: 19px; color: var(--ember); }
+p { margin: 0 0 14px; }
+.muted { color: var(--muted); }
+
+/* скриншоты: лента с прокруткой на телефоне, сетка на широком экране */
+.shots { display: flex; gap: 12px; margin: 0 -16px; padding: 4px 16px 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; }
+.shots figure { flex: 0 0 62%; max-width: 250px; margin: 0; scroll-snap-align: center; }
+.shots img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+.shots figcaption { margin-top: 8px; text-align: center; color: var(--muted);
+  font: 14px/1.3 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+@media (min-width: 760px) {
+  .shots { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; padding: 0; overflow: visible; }
+  .shots figure { max-width: none; }
+}
+
+/* что в игре */
+.features { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 640px) { .features { grid-template-columns: 1fr 1fr; } }
+.features li { padding: 14px 16px; border: 1px solid var(--line); border-left: 3px solid var(--ember-deep); border-radius: 8px; background: var(--panel); }
+.features b { display: block; margin-bottom: 2px; color: #ffe9c9; }
+
+/* незаполненные поля — чтобы их нельзя было не заметить */
+.todo { padding: 1px 6px; border: 1px dashed #b3261e; border-radius: 4px; background: #ffe08a; color: #7a1410; font-weight: bold;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+/* политика — лист пергамента */
+.paper { margin: 26px 0; padding: 22px 20px 26px; border-radius: 10px; background: var(--paper); color: var(--ink); }
+.paper h1 { margin: 0 0 14px; font-size: clamp(24px, 6vw, 32px); line-height: 1.2; }
+.paper h2 { margin: 26px 0 8px; font-size: 20px; color: #6a2f0c; }
+.paper a { color: #8a3a08; }
+.paper ul { margin: 0 0 14px; padding-left: 22px; }
+.paper .meta { margin: 0 0 18px; padding: 12px 14px; border-left: 3px solid #b0652a; background: rgba(120, 70, 20, .10); }
+.paper .meta p { margin: 0 0 4px; }
+
+footer { padding: 26px 0 40px; border-top: 1px solid var(--line); color: var(--muted);
+  font: 14px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+footer p { margin: 0 0 6px; }
