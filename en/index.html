@@ -6,6 +6,11 @@
 <title>Forgewright: Blacksmith Sim</title>
 <meta name="description" content="Forge swords and armor with real smithing: quench, temper, sharpen, mine, duel.">
 <link rel="alternate" hreflang="ru" href="../">
+<link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#1a1411">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -45,15 +50,55 @@
     <div class="wrap">
       <h2>What it looks like</h2>
       <p class="muted">Screenshots are from the Russian version; the game is fully available in English.</p>
-      <div class="shots">
-        <figure><img src="../img/forge.jpg" width="540" height="960" alt="A level 3 forge: hearth, anvil and a chest of finished work"><figcaption>The forge</figcaption></figure>
-        <figure><img src="../img/temper.jpg" width="540" height="960" loading="lazy" alt="Tempering a blade: oxide colors from straw to blue"><figcaption>Tempering by color</figcaption></figure>
-        <figure><img src="../img/sharpen.jpg" width="540" height="960" loading="lazy" alt="Grinding on a wet wheel with a fan of sparks"><figcaption>Grinding wheel</figcaption></figure>
-        <figure><img src="../img/sword3d.jpg" width="540" height="960" loading="lazy" alt="A finished sword in 3D inspection"><figcaption>Sword in 3D</figcaption></figure>
-        <figure><img src="../img/cuirass3d.jpg" width="540" height="960" loading="lazy" alt="A breastplate in 3D inspection"><figcaption>Breastplate in 3D</figcaption></figure>
-        <figure><img src="../img/shop.jpg" width="540" height="960" loading="lazy" alt="The weaponsmith's shop: sword parts with prices"><figcaption>The shop</figcaption></figure>
-        <figure><img src="../img/village.jpg" width="540" height="960" loading="lazy" alt="The village square in the evening"><figcaption>Village at dusk</figcaption></figure>
-        <figure><img src="../img/arena.jpg" width="540" height="960" loading="lazy" alt="Shadow duel in the arena: two silhouettes behind a screen"><figcaption>Shadow duel</figcaption></figure>
+      <div class="shots" id="shots">
+        <figure><a class="zoom" href="#shot-forge" aria-label="Enlarge: The forge"><img src="../img/forge.jpg" width="540" height="960" alt="A level 3 forge: hearth, anvil and a chest of finished work"></a><figcaption>The forge</figcaption></figure>
+        <figure><a class="zoom" href="#shot-temper" aria-label="Enlarge: Tempering by color"><img src="../img/temper.jpg" width="540" height="960" loading="lazy" alt="Tempering a blade: oxide colors from straw to blue"></a><figcaption>Tempering by color</figcaption></figure>
+        <figure><a class="zoom" href="#shot-sharpen" aria-label="Enlarge: Grinding wheel"><img src="../img/sharpen.jpg" width="540" height="960" loading="lazy" alt="Grinding on a wet wheel with a fan of sparks"></a><figcaption>Grinding wheel</figcaption></figure>
+        <figure><a class="zoom" href="#shot-sword3d" aria-label="Enlarge: Sword in 3D"><img src="../img/sword3d.jpg" width="540" height="960" loading="lazy" alt="A finished sword in 3D inspection"></a><figcaption>Sword in 3D</figcaption></figure>
+        <figure><a class="zoom" href="#shot-cuirass3d" aria-label="Enlarge: Breastplate in 3D"><img src="../img/cuirass3d.jpg" width="540" height="960" loading="lazy" alt="A breastplate in 3D inspection"></a><figcaption>Breastplate in 3D</figcaption></figure>
+        <figure><a class="zoom" href="#shot-shop" aria-label="Enlarge: The shop"><img src="../img/shop.jpg" width="540" height="960" loading="lazy" alt="The weaponsmith's shop: sword parts with prices"></a><figcaption>The shop</figcaption></figure>
+        <figure><a class="zoom" href="#shot-village" aria-label="Enlarge: Village at dusk"><img src="../img/village.jpg" width="540" height="960" loading="lazy" alt="The village square in the evening"></a><figcaption>Village at dusk</figcaption></figure>
+        <figure><a class="zoom" href="#shot-arena" aria-label="Enlarge: Shadow duel"><img src="../img/arena.jpg" width="540" height="960" loading="lazy" alt="Shadow duel in the arena: two silhouettes behind a screen"></a><figcaption>Shadow duel</figcaption></figure>
+      </div>
+      <div class="lb" id="shot-forge" role="dialog" aria-label="The forge">
+        <a class="lb-bg" href="#shots" aria-label="Close" tabindex="-1"></a>
+        <img src="../img/full/forge.jpg" width="1080" height="1920" loading="lazy" alt="A level 3 forge: hearth, anvil and a chest of finished work">
+        <a class="lb-x" href="#shots" aria-label="Close">×</a>
+      </div>
+      <div class="lb" id="shot-temper" role="dialog" aria-label="Tempering by color">
+        <a class="lb-bg" href="#shots" aria-label="Close" tabindex="-1"></a>
+        <img src="../img/full/temper.jpg" width="1080" height="1920" loading="lazy" alt="Tempering a blade: oxide colors from straw to blue">
+        <a class="lb-x" href="#shots" aria-label="Close">×</a>
+      </div>
+      <div class="lb" id="shot-sharpen" role="dialog" aria-label="Grinding wheel">
+        <a class="lb-bg" href="#shots" aria-label="Close" tabindex="-1"></a>
+        <img src="../img/full/sharpen.jpg" width="1080" height="1920" loading="lazy" alt="Grinding on a wet wheel with a fan of sparks">
+        <a class="lb-x" href="#shots" aria-label="Close">×</a>
+      </div>
+      <div class="lb" id="shot-sword3d" role="dialog" aria-label="Sword in 3D">
+        <a class="lb-bg" href="#shots" aria-label="Close" tabindex="-1"></a>
+        <img src="../img/full/sword3d.jpg" width="1080" height="1920" loading="lazy" alt="A finished sword in 3D inspection">
+        <a class="lb-x" href="#shots" aria-label="Close">×</a>
+      </div>
+      <div class="lb" id="shot-cuirass3d" role="dialog" aria-label="Breastplate in 3D">
+        <a class="lb-bg" href="#shots" aria-label="Close" tabindex="-1"></a>
+        <img src="../img/full/cuirass3d.jpg" width="1080" height="1920" loading="lazy" alt="A breastplate in 3D inspection">
+        <a class="lb-x" href="#shots" aria-label="Close">×</a>
+      </div>
+      <div class="lb" id="shot-shop" role="dialog" aria-label="The shop">
+        <a class="lb-bg" href="#shots" aria-label="Close" tabindex="-1"></a>
+        <img src="../img/full/shop.jpg" width="1080" height="1920" loading="lazy" alt="The weaponsmith's shop: sword parts with prices">
+        <a class="lb-x" href="#shots" aria-label="Close">×</a>
+      </div>
+      <div class="lb" id="shot-village" role="dialog" aria-label="Village at dusk">
+        <a class="lb-bg" href="#shots" aria-label="Close" tabindex="-1"></a>
+        <img src="../img/full/village.jpg" width="1080" height="1920" loading="lazy" alt="The village square in the evening">
+        <a class="lb-x" href="#shots" aria-label="Close">×</a>
+      </div>
+      <div class="lb" id="shot-arena" role="dialog" aria-label="Shadow duel">
+        <a class="lb-bg" href="#shots" aria-label="Close" tabindex="-1"></a>
+        <img src="../img/full/arena.jpg" width="1080" height="1920" loading="lazy" alt="Shadow duel in the arena: two silhouettes behind a screen">
+        <a class="lb-x" href="#shots" aria-label="Close">×</a>
       </div>
     </div>
   </section>
@@ -62,18 +107,18 @@
     <div class="wrap">
       <h2>What is in the game</h2>
       <ul class="features">
-        <li><b>Real forging</b>Bellows and working heat, two hammers, spark and magnet tests, quenching in water or oil,
+        <li><b><img class="ficon" src="../img/icons/forging.png" width="48" height="48" alt="">Real forging</b>Bellows and working heat, two hammers, spark and magnet tests, quenching in water or oil,
           tempering by oxide colors, grinding on a wet wheel and honing on a stone.</li>
-        <li><b>A sword built from parts</b>Guard, grip, pommel and balance. No two blades are alike: shape, temper colors and maker's mark come from your forging.</li>
-        <li><b>3D inspection</b>Turn your finished sword and breastplate in your hands: temper colors, notches and dents from past fights.</li>
-        <li><b>Armor workshop</b>Dish a breastplate on a stump and assemble it with rivets and straps.</li>
-        <li><b>The shop</b>Buy guards, grips and pommels for assembly, sell spare ore. Spend arena honor on marks and tools.</li>
-        <li><b>Village orders</b>Villagers bring orders with conditions. Get to know them — from stranger to friend of the forge.</li>
-        <li><b>A mine in tiers</b>Lantern, oil, backpack. The deeper you go, the richer the ore and the bigger the beasts — a honey badger and a ribbed newt.
+        <li><b><img class="ficon" src="../img/icons/parts.png" width="48" height="48" alt="">A sword built from parts</b>Guard, grip, pommel and balance. No two blades are alike: shape, temper colors and maker's mark come from your forging.</li>
+        <li><b><img class="ficon" src="../img/icons/inspect3d.png" width="48" height="48" alt="">3D inspection</b>Turn your finished sword and breastplate in your hands: temper colors, notches and dents from past fights.</li>
+        <li><b><img class="ficon" src="../img/icons/armor.png" width="48" height="48" alt="">Armor workshop</b>Dish a breastplate on a stump and assemble it with rivets and straps.</li>
+        <li><b><img class="ficon" src="../img/icons/shop.png" width="48" height="48" alt="">The shop</b>Buy guards, grips and pommels for assembly, sell spare ore. Spend arena honor on marks and tools.</li>
+        <li><b><img class="ficon" src="../img/icons/village.png" width="48" height="48" alt="">Village orders</b>Villagers bring orders with conditions. Get to know them — from stranger to friend of the forge.</li>
+        <li><b><img class="ficon" src="../img/icons/mine.png" width="48" height="48" alt="">A mine in tiers</b>Lantern, oil, backpack. The deeper you go, the richer the ore and the bigger the beasts — a honey badger and a ribbed newt.
           Fights end in surrender — no one dies.</li>
-        <li><b>Arena and guild ladder</b>A shadow duel behind a paper screen: only your steel shines. Eight apprentice rivals and a review of every notch.</li>
-        <li><b>Master's journal</b>Why steel cracks, what the Curie point is, which animals are endangered — real facts with sources.</li>
-        <li><b>Workshop</b>Upgrade the hearth, anvil and bench with your own ore and coins. Guild trials and a wall of your best work.</li>
+        <li><b><img class="ficon" src="../img/icons/arena.png" width="48" height="48" alt="">Arena and guild ladder</b>A shadow duel behind a paper screen: only your steel shines. Eight apprentice rivals and a review of every notch.</li>
+        <li><b><img class="ficon" src="../img/icons/journal.png" width="48" height="48" alt="">Master's journal</b>Why steel cracks, what the Curie point is, which animals are endangered — real facts with sources.</li>
+        <li><b><img class="ficon" src="../img/icons/workshop.png" width="48" height="48" alt="">Workshop</b>Upgrade the hearth, anvil and bench with your own ore and coins. Guild trials and a wall of your best work.</li>
       </ul>
       <h3>What's next</h3>
       <p class="muted">The game is in development. Coming up: more kinds of gear — axes, maces, helmets — a leather workshop,

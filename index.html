@@ -6,6 +6,11 @@
 <title>Горн: симулятор кузнеца</title>
 <meta name="description" content="Куй мечи и броню настоящими приёмами кузнецов: закалка, заточка, шахта, арена.">
 <link rel="alternate" hreflang="en" href="en/">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1a1411">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,15 +49,55 @@
   <section>
     <div class="wrap">
       <h2>Как это выглядит</h2>
-      <div class="shots">
-        <figure><img src="img/forge.jpg" width="540" height="960" alt="Кузница третьего уровня: горн, наковальня, сундук с изделиями"><figcaption>Кузница</figcaption></figure>
-        <figure><img src="img/temper.jpg" width="540" height="960" loading="lazy" alt="Отпуск клинка: цвета побежалости от соломенного до синего"><figcaption>Отпуск по цветам</figcaption></figure>
-        <figure><img src="img/sharpen.jpg" width="540" height="960" loading="lazy" alt="Заточка на мокром круге, веер искр"><figcaption>Заточка на круге</figcaption></figure>
-        <figure><img src="img/sword3d.jpg" width="540" height="960" loading="lazy" alt="Готовый меч в 3D-осмотре"><figcaption>Меч в 3D</figcaption></figure>
-        <figure><img src="img/cuirass3d.jpg" width="540" height="960" loading="lazy" alt="Кираса в 3D-осмотре"><figcaption>Кираса в 3D</figcaption></figure>
-        <figure><img src="img/shop.jpg" width="540" height="960" loading="lazy" alt="Лавка оружейника: детали меча с ценами"><figcaption>Лавка</figcaption></figure>
-        <figure><img src="img/village.jpg" width="540" height="960" loading="lazy" alt="Площадь деревни мастеров вечером"><figcaption>Деревня вечером</figcaption></figure>
-        <figure><img src="img/arena.jpg" width="540" height="960" loading="lazy" alt="Бой теней на арене: два силуэта за ширмой"><figcaption>Бой теней</figcaption></figure>
+      <div class="shots" id="shots">
+        <figure><a class="zoom" href="#shot-forge" aria-label="Увеличить: Кузница"><img src="img/forge.jpg" width="540" height="960" alt="Кузница третьего уровня: горн, наковальня, сундук с изделиями"></a><figcaption>Кузница</figcaption></figure>
+        <figure><a class="zoom" href="#shot-temper" aria-label="Увеличить: Отпуск по цветам"><img src="img/temper.jpg" width="540" height="960" loading="lazy" alt="Отпуск клинка: цвета побежалости от соломенного до синего"></a><figcaption>Отпуск по цветам</figcaption></figure>
+        <figure><a class="zoom" href="#shot-sharpen" aria-label="Увеличить: Заточка на круге"><img src="img/sharpen.jpg" width="540" height="960" loading="lazy" alt="Заточка на мокром круге, веер искр"></a><figcaption>Заточка на круге</figcaption></figure>
+        <figure><a class="zoom" href="#shot-sword3d" aria-label="Увеличить: Меч в 3D"><img src="img/sword3d.jpg" width="540" height="960" loading="lazy" alt="Готовый меч в 3D-осмотре"></a><figcaption>Меч в 3D</figcaption></figure>
+        <figure><a class="zoom" href="#shot-cuirass3d" aria-label="Увеличить: Кираса в 3D"><img src="img/cuirass3d.jpg" width="540" height="960" loading="lazy" alt="Кираса в 3D-осмотре"></a><figcaption>Кираса в 3D</figcaption></figure>
+        <figure><a class="zoom" href="#shot-shop" aria-label="Увеличить: Лавка"><img src="img/shop.jpg" width="540" height="960" loading="lazy" alt="Лавка оружейника: детали меча с ценами"></a><figcaption>Лавка</figcaption></figure>
+        <figure><a class="zoom" href="#shot-village" aria-label="Увеличить: Деревня вечером"><img src="img/village.jpg" width="540" height="960" loading="lazy" alt="Площадь деревни мастеров вечером"></a><figcaption>Деревня вечером</figcaption></figure>
+        <figure><a class="zoom" href="#shot-arena" aria-label="Увеличить: Бой теней"><img src="img/arena.jpg" width="540" height="960" loading="lazy" alt="Бой теней на арене: два силуэта за ширмой"></a><figcaption>Бой теней</figcaption></figure>
+      </div>
+      <div class="lb" id="shot-forge" role="dialog" aria-label="Кузница">
+        <a class="lb-bg" href="#shots" aria-label="Закрыть" tabindex="-1"></a>
+        <img src="img/full/forge.jpg" width="1080" height="1920" loading="lazy" alt="Кузница третьего уровня: горн, наковальня, сундук с изделиями">
+        <a class="lb-x" href="#shots" aria-label="Закрыть">×</a>
+      </div>
+      <div class="lb" id="shot-temper" role="dialog" aria-label="Отпуск по цветам">
+        <a class="lb-bg" href="#shots" aria-label="Закрыть" tabindex="-1"></a>
+        <img src="img/full/temper.jpg" width="1080" height="1920" loading="lazy" alt="Отпуск клинка: цвета побежалости от соломенного до синего">
+        <a class="lb-x" href="#shots" aria-label="Закрыть">×</a>
+      </div>
+      <div class="lb" id="shot-sharpen" role="dialog" aria-label="Заточка на круге">
+        <a class="lb-bg" href="#shots" aria-label="Закрыть" tabindex="-1"></a>
+        <img src="img/full/sharpen.jpg" width="1080" height="1920" loading="lazy" alt="Заточка на мокром круге, веер искр">
+        <a class="lb-x" href="#shots" aria-label="Закрыть">×</a>
+      </div>
+      <div class="lb" id="shot-sword3d" role="dialog" aria-label="Меч в 3D">
+        <a class="lb-bg" href="#shots" aria-label="Закрыть" tabindex="-1"></a>
+        <img src="img/full/sword3d.jpg" width="1080" height="1920" loading="lazy" alt="Готовый меч в 3D-осмотре">
+        <a class="lb-x" href="#shots" aria-label="Закрыть">×</a>
+      </div>
+      <div class="lb" id="shot-cuirass3d" role="dialog" aria-label="Кираса в 3D">
+        <a class="lb-bg" href="#shots" aria-label="Закрыть" tabindex="-1"></a>
+        <img src="img/full/cuirass3d.jpg" width="1080" height="1920" loading="lazy" alt="Кираса в 3D-осмотре">
+        <a class="lb-x" href="#shots" aria-label="Закрыть">×</a>
+      </div>
+      <div class="lb" id="shot-shop" role="dialog" aria-label="Лавка">
+        <a class="lb-bg" href="#shots" aria-label="Закрыть" tabindex="-1"></a>
+        <img src="img/full/shop.jpg" width="1080" height="1920" loading="lazy" alt="Лавка оружейника: детали меча с ценами">
+        <a class="lb-x" href="#shots" aria-label="Закрыть">×</a>
+      </div>
+      <div class="lb" id="shot-village" role="dialog" aria-label="Деревня вечером">
+        <a class="lb-bg" href="#shots" aria-label="Закрыть" tabindex="-1"></a>
+        <img src="img/full/village.jpg" width="1080" height="1920" loading="lazy" alt="Площадь деревни мастеров вечером">
+        <a class="lb-x" href="#shots" aria-label="Закрыть">×</a>
+      </div>
+      <div class="lb" id="shot-arena" role="dialog" aria-label="Бой теней">
+        <a class="lb-bg" href="#shots" aria-label="Закрыть" tabindex="-1"></a>
+        <img src="img/full/arena.jpg" width="1080" height="1920" loading="lazy" alt="Бой теней на арене: два силуэта за ширмой">
+        <a class="lb-x" href="#shots" aria-label="Закрыть">×</a>
       </div>
     </div>
   </section>
@@ -61,18 +106,18 @@
     <div class="wrap">
       <h2>Что в игре</h2>
       <ul class="features">
-        <li><b>Правдоподобная ковка</b>Мехи и рабочий жар, два молота, проба искрой и магнитом, закалка в воде или масле,
+        <li><b><img class="ficon" src="img/icons/forging.png" width="48" height="48" alt="">Правдоподобная ковка</b>Мехи и рабочий жар, два молота, проба искрой и магнитом, закалка в воде или масле,
           отпуск по цветам побежалости, заточка на мокром круге и доводка на камне.</li>
-        <li><b>Меч из деталей</b>Гарда, рукоять, навершие и баланс. Двух одинаковых клинков нет: форма, побежалость и клеймо — от твоей ковки.</li>
-        <li><b>Осмотр в 3D</b>Готовый меч и кирасу можно покрутить в руках: видны цвета отпуска, зазубрины и вмятины после боёв.</li>
-        <li><b>Бронная мастерская</b>Кираса выколачивается куполом на пне и собирается на заклёпках и ремнях.</li>
-        <li><b>Лавка</b>Покупай гарды, рукояти и навершия для сборки, продавай лишнюю руду. За честь арены — клейма и инструменты.</li>
-        <li><b>Деревня и заказы</b>Жители приносят заказы с условиями. С ними можно подружиться — от незнакомца до друга кузницы.</li>
-        <li><b>Шахта по ярусам</b>Фонарь, масло, рюкзак. Чем глубже, тем богаче руда и крупнее звери — медоед и ребристый тритон.
+        <li><b><img class="ficon" src="img/icons/parts.png" width="48" height="48" alt="">Меч из деталей</b>Гарда, рукоять, навершие и баланс. Двух одинаковых клинков нет: форма, побежалость и клеймо — от твоей ковки.</li>
+        <li><b><img class="ficon" src="img/icons/inspect3d.png" width="48" height="48" alt="">Осмотр в 3D</b>Готовый меч и кирасу можно покрутить в руках: видны цвета отпуска, зазубрины и вмятины после боёв.</li>
+        <li><b><img class="ficon" src="img/icons/armor.png" width="48" height="48" alt="">Бронная мастерская</b>Кираса выколачивается куполом на пне и собирается на заклёпках и ремнях.</li>
+        <li><b><img class="ficon" src="img/icons/shop.png" width="48" height="48" alt="">Лавка</b>Покупай гарды, рукояти и навершия для сборки, продавай лишнюю руду. За честь арены — клейма и инструменты.</li>
+        <li><b><img class="ficon" src="img/icons/village.png" width="48" height="48" alt="">Деревня и заказы</b>Жители приносят заказы с условиями. С ними можно подружиться — от незнакомца до друга кузницы.</li>
+        <li><b><img class="ficon" src="img/icons/mine.png" width="48" height="48" alt="">Шахта по ярусам</b>Фонарь, масло, рюкзак. Чем глубже, тем богаче руда и крупнее звери — медоед и ребристый тритон.
           Бои «до сдачи» — никто не погибает.</li>
-        <li><b>Арена и лестница гильдии</b>Бой теней за ширмой: блестит только твой металл. Восемь учеников-соперников и разбор каждой зазубрины.</li>
-        <li><b>Журнал мастера</b>Почему трескается сталь, что такое точка Кюри, какие звери под угрозой — настоящие факты с источниками.</li>
-        <li><b>Мастерская</b>Горн, наковальня и верстак улучшаются своей рудой и монетами. Испытания гильдии и стена лучших работ.</li>
+        <li><b><img class="ficon" src="img/icons/arena.png" width="48" height="48" alt="">Арена и лестница гильдии</b>Бой теней за ширмой: блестит только твой металл. Восемь учеников-соперников и разбор каждой зазубрины.</li>
+        <li><b><img class="ficon" src="img/icons/journal.png" width="48" height="48" alt="">Журнал мастера</b>Почему трескается сталь, что такое точка Кюри, какие звери под угрозой — настоящие факты с источниками.</li>
+        <li><b><img class="ficon" src="img/icons/workshop.png" width="48" height="48" alt="">Мастерская</b>Горн, наковальня и верстак улучшаются своей рудой и монетами. Испытания гильдии и стена лучших работ.</li>
       </ul>
       <h3>Дальше</h3>
       <p class="muted">Игра в разработке. Впереди другие виды снаряжения — топоры, булавы, шлемы, — кожевенная мастерская,
