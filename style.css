@@ -28,8 +28,20 @@ a:hover, a:focus { color: #ffc27a; }
 .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
 
 /* шапка */
-.top { border-bottom: 1px solid var(--line); background: #15100d; }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; }
+.top { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--line); background: #15100d; }
+.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 12px; min-height: 52px; }
+/* меню по разделам: на телефоне вторая строка с горизонтальной прокруткой, на широком экране — в одну строку с шапкой */
+.menu { order: 3; flex: 1 0 100%; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px; font: 15px/1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; white-space: nowrap; }
+.menu::-webkit-scrollbar { display: none; }
+.menu a { flex: 0 0 auto; padding: 11px 13px; border-radius: 6px; color: var(--muted); text-decoration: none; }
+.menu a:hover, .menu a:focus-visible { background: var(--panel); color: #ffc27a; outline: none; }
+.menu a:focus-visible { outline: 2px solid var(--ember); outline-offset: -2px; }
+@media (min-width: 760px) { .menu { order: 0; flex: 1 1 auto; justify-content: center; padding-bottom: 0; } }
+/* разделы не прячутся под закреплённой шапкой; плавная прокрутка, если не отключена в системе */
+html { scroll-padding-top: 90px; }
+@media (min-width: 760px) { html { scroll-padding-top: 70px; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 .brand { color: var(--text); text-decoration: none; font-weight: bold; letter-spacing: .02em; }
 .lang { font: 14px/1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; white-space: nowrap; }
 .lang a, .lang span { display: inline-block; padding: 9px 12px; border-radius: 6px; text-decoration: none; }
@@ -86,7 +98,7 @@ p { margin: 0 0 14px; }
 /* увеличение скриншотов: одно окно с лентой всех 8 кадров. Ссылка #shot-… делает кадр :target — окно видно
    (:has), браузер прокручивает ленту к этому кадру. Свайп — прокрутка ленты с прилипанием (scroll-snap), стрелки —
    ссылки на соседние кадры; фон и крестик ведут на #shots. Скрипт внизу страницы только добавляет Esc и стрелки клавиатуры. */
-#shots { scroll-margin-top: 80px; }
+#shots { scroll-margin-top: 0; }
 .zoom { display: block; border-radius: 12px; cursor: zoom-in; }
 .zoom:focus-visible { outline: 3px solid var(--ember); outline-offset: 3px; }
 .lb { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(8, 6, 5, .94); }
