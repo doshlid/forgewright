@@ -69,6 +69,20 @@ p { margin: 0 0 14px; }
   .shots figure { max-width: none; }
 }
 
+/* ролик: ширина телефона, по центру; файл грузится только по нажатию */
+.trailer { width: min(100%, 360px); margin: 26px auto 0; }
+.trailer video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; border: 1px solid var(--line);
+  border-radius: 14px; background: #000; }
+.trailer figcaption { margin-top: 8px; color: var(--muted); font: 14px/1.3 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+/* призыв */
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.btn { display: inline-block; padding: 12px 20px; border-radius: 8px; background: var(--ember-deep); color: #fff; text-decoration: none;
+  font: bold 16px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.btn:hover, .btn:focus { background: #e0782a; color: #fff; }
+.btn.ghost { background: transparent; border: 1px solid var(--ember-deep); color: var(--ember); }
+.btn.ghost:hover, .btn.ghost:focus { background: rgba(200, 100, 30, .18); color: #ffc27a; }
+
 /* что в игре */
 .features { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
 @media (min-width: 640px) { .features { grid-template-columns: 1fr 1fr; } }
